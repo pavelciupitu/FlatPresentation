@@ -1,8 +1,26 @@
+-
+    var topNavigationList = [
+        {label: 'Home', link: '/'},
+        {label: 'Constanta', link: '/constanta'},
+        {label: 'Blocul ST8', link: '/bloculSt8'},
+        {label: 'Apartament 40', link: '/apartament40'},
+        {label: 'Concluzii', link: '/concluzii'},
+        {label: 'Cum se cumpara', link: '/cumSeCumpara'},
+        {label: 'Contact', link: '/Contact'},
+    ];
+
 header
-    a.current(href="/") Home
-    a(href="/constanta") Constanta
-    a(href="/bloculSt8") Blocul ST8
-    a(href="/apartament40") Apartament 40
-    a(href="/concluzii") Concluzii
-    a(href="/cumSeCumpara") Cum se cumpara
-    a(href="/Contact") Contact
+    each objectFromArray in topNavigationList
+        //- check if navigation label is the same as landingpage
+        if objectFromArray.label == landingPage
+            a.current(href=objectFromArray.link)=objectFromArray.label
+        else
+            a(href=objectFromArray.link)=objectFromArray.label
+
+    //- a.current(href="/") Home
+    //- a(href="/constanta") Constanta
+    //- a(href="/bloculSt8") Blocul ST8
+    //- a(href="/apartament40") Apartament 40
+    //- a(href="/concluzii") Concluzii
+    //- a(href="/cumSeCumpara") Cum se cumpara
+    //- a(href="/Contact") Contact
