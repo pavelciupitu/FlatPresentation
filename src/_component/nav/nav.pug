@@ -1,8 +1,78 @@
+-
+    var sideNavigationList = {
+        'Home': {
+            title: 'Apartament vanzare Constanta',
+            linkList:[
+                {label:'Constanta', link: '/constanta'},
+                {label:'Blocul ST8', link: '/bloculSt8'},
+                {label:'Apartament 40', link: '/apartament40'},
+                {label:'Concluzii', link: '/concluzii'},
+                {label:'Cum se cumpara', link: '/cumSeCumpara'},
+                {label:'Contact', link: '/contact'},
+            ]
+        },
+        'Constanta': {
+            title: "Constanta",
+            linkList:[
+                {label: "Descriere Generala", link: '/constanta/descriereGenerala'},
+                {label: "Top 5 atractii", link: '/constanta/top5atractii'},
+            ]
+        },
+        'Blocul ST8': {
+            title: "Blocul ST8",
+            linkList:[
+                {label: "Descriere Generala", link: '/bloculSt8/descriereGenerala'},
+                {label: "Structura blocului", link: '/bloculSt8/structuraBlocului'},
+                {label: "Adrministratie", link: '/bloculSt8/administratie'},
+                {label: "Vecini", link: '/bloculSt8/vecini'},
+            ]
+        },
+        'Apartament 40': {
+            title: "Prezentarea apartamentului",
+            linkList:[
+                {label: "Amplasament", link: '/apartament40/amplasament'},
+                {label: "Compartimentare", link: '/apartament40/compartimentare'},
+                {label: "Instalatie electrica", link: '/apartament40/electric'},
+                {label: "Instalatia sanitara", link: '/apartament40/sanitar'},
+                {label: "Incalzire", link: '/apartament40/incalzire'},
+                {label: "Galerie foto", link: '/apartament40/poze'},
+                {label: "Dependinte", link: '/apartament40/dependinte'},
+                {label: "Loc parcare", link: '/apartament40/parcare'},
+                {label: "Boxa", link: '/apartament40/boxa'},
+                {label: "Uscator", link: '/apartament40/uscator'},
+                {label: "Spatiu biciclete", link: '/apartament40/biciclete'},
+                {label: "Terasa", link: '/apartament40/terasa'},
+            ]
+        },
+        'Cum se cumpara': {
+            title: "Cum se cumpara?",
+            linkList:[
+                {label: "Regulament", link: '/cumSeCumpara/regulament'},
+            ]
+        },
+        'Concluzii': {
+            title: "Sumar apartament",
+            linkList:[
+                {label: "Regulament", link: '/concluzii/lista'},
+            ]
+        },
+        'Contact': {
+            title: "Contact",
+            linkList:[
+                {label: "Agentii", link: '/contact/agentii'},
+            ]
+        },
+    };
+
+
 nav
-    h3 Meniu
-    a(href="/constanta") Constanta
-    a(href="/bloculSt8") Blocul ST8
-    a(href="/apartament40") Apartament 40
-    a(href="/concluzii") Concluzii
-    a(href="/cumSeCumpara") Cum se cumpara
-    a(href="/contact") Contact
+    h3=sideNavigationList[landingPage].title
+    each element in sideNavigationList[landingPage].linkList
+        a(href=element.link)=element.label
+
+    //- a(href="/constanta") Constanta
+    //- a(href="/bloculSt8") Blocul ST8
+    //- a(href="/apartament40") Apartament 40
+    //- a(href="/concluzii") Concluzii
+    //- a(href="/cumSeCumpara") Cum se cumpara
+    //- a(href="/contact") Contact
