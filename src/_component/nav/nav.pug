@@ -69,9 +69,9 @@ nav
     h3=sideNavigationList[landingPage].title
     each element in sideNavigationList[landingPage].linkList
         if element.link == activeLink
-            a.current(href=element.link)=element.label
+            a.current(href=`${baseUrl}${element.link}`)=element.label
         else
-            a(href=element.link)=element.label
+            a(href=`${baseUrl}${element.link}`)=element.label
 
     //- a(href="/constanta") Constanta
     //- a(href="/bloculSt8") Blocul ST8

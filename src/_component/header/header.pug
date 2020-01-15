@@ -13,9 +13,10 @@ header
     each objectFromArray in topNavigationList
         //- check if navigation label is the same as landingpage
         if objectFromArray.label == landingPage
-            a.current(href=objectFromArray.link)=objectFromArray.label
+            a.current(href=`${baseUrl}${objectFromArray.link}`)=objectFromArray.label
         else
-            a(href=objectFromArray.link)=objectFromArray.label
+            a(href=`${baseUrl}${objectFromArray.link}`)=objectFromArray.label
+
 
     //- a.current(href="/") Home
     //- a(href="/constanta") Constanta
